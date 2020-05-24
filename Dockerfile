@@ -1,8 +1,8 @@
 from bryandollery/aws-cli-alpine
 
-COPY --from=lachlanevenson/k8s-kubectl:v1.10.3 /usr/local/bin/kubectl /usr/local/bin/kubectl
-COPY --from=hashicorp/terraform /bin/terraform /usr/local/bin/terraform
-COPY --from=hashicorp/packer /bin/packer /usr/local/bin/packer
+COPY --from=lachlanevenson/k8s-kubectl:latest /usr/local/bin/kubectl /usr/local/bin/kubectl
+COPY --from=hashicorp/terraform:latest /bin/terraform /usr/local/bin/terraform
+COPY --from=hashicorp/packer:latest /bin/packer /usr/local/bin/packer
 
 run curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash && \
     echo "alias ll='ls -gAlF'" >> /root/.bash_aliases && \
