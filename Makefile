@@ -6,3 +6,8 @@ run:
 
 bash:
 	docker exec -it pawst bash
+
+kill:
+	docker rm -f pawst
+
+stop: kill
