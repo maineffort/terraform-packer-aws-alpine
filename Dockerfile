@@ -14,7 +14,8 @@ run curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tool
     git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/plugins/start/fugitive && \
     terraform -install-autocomplete && \
     packer -autocomplete-install && \
-    echo "plugin_cache_dir = /plugin-cache" >> /.terraformrc
+    echo "plugin_cache_dir = /plugin-cache" >> /.terraformrc && \
+    apk add --no-cache less
 
 volume /plugin-cache
 
