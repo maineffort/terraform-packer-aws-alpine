@@ -17,7 +17,8 @@ run curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tool
     echo "plugin_cache_dir = /plugin-cache" >> /.terraformrc && \
     apk add --no-cache less
 
-volume /plugin-cache
+run rm /.terraformrc
 
+volume /plugin-cache
 
 entrypoint ["/bin/bash"]
