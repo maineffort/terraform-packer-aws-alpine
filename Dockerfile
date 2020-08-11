@@ -12,13 +12,12 @@ run curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tool
     git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform && \
     git clone https://github.com/hashivim/vim-packer.git ~/.vim/pack/plugins/start/vim-packer && \
     git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/plugins/start/fugitive && \
+    git clone https://github.com/martinda/Jenkinsfile-vim-syntax.git ~/.vim/pack/plugins/start/jenkinsfile && \
     terraform -install-autocomplete && \
     packer -autocomplete-install && \
-    echo "plugin_cache_dir = /plugin-cache" >> /.terraformrc && \
+    echo "plugin_cache_dir = \"/plugin-cache\"" >> /.terraformrc && \
     apk add --no-cache less
-
-run rm /.terraformrc
 
 volume /plugin-cache
 
-entrypoint ["/bin/bash"]
+entrypoint ["/bin/bash", "-c"]
