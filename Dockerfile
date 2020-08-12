@@ -1,7 +1,7 @@
 from bryandollery/aws-cli-alpine
 
 copy --from=lachlanevenson/k8s-kubectl:latest /usr/local/bin/kubectl /usr/local/bin/kubectl
-copy --from=hashicorp/terraform:latest /bin/terraform /usr/local/bin/terraform
+copy --from=hashicorp/terraform:0.13.0 /bin/terraform /usr/local/bin/terraform
 copy --from=hashicorp/packer:latest /bin/packer /usr/local/bin/packer
 
 env TF_CLI_CONFIG_FILE="/.terraformrc"
