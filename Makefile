@@ -11,3 +11,6 @@ kill:
 	docker rm -f pawst
 
 stop: kill
+
+push:
+	docker push bryandollery/terraform-packer-aws-alpine:latest
